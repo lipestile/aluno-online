@@ -15,10 +15,22 @@ class Nota {
     }
 
     mediaCA() {
-        if(this.mediaFinal() >= 5){
-            return "aprovado";
-        }else if (this.mediaFinal() < 5 ){
-            return "reprovado";
+        if(this.mediaFinal() >= 9){
+            return "SS";
+        }else if (this.mediaFinal() >= 7  < 8.9 ){
+            return "MS";
+        
+        }else if (this.mediaFinal() >= 5  < 6.9 ){
+            return "MM";
+        
+        }else if (this.mediaFinal() >= 3  < 4.9 ){
+            return "Mi";
+        
+        }else if (this.mediaFinal() >= 0.1  < 2.9 ){
+            return "II";
+        }
+        else if (this.mediaFinal() == 0){
+            return "SR";
         }
         
     }
