@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "test": "jest"
-    
+    "start": "http-server ./ --port=5001 -c-1",
+    "tests": "cypress open"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -17,6 +17,8 @@
   "description": "dv",
   "main": "app.js",
   "devDependencies": {
+    "cypress": "^12.13.0",
+    "http-server": "^14.1.1",
     "jest": "^29.5.0"
   },
   "author": "",
