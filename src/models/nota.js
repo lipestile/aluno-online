@@ -14,25 +14,22 @@ class Nota {
         );
     }
 
-    mediaCA() {
-        if(this.mediaFinal() >= 9){
-            return "SS";
-        }else if (this.mediaFinal() >= 7  < 8.9 ){
-            return "MS";
-        
-        }else if (this.mediaFinal() >= 5  < 6.9 ){
-            return "MM";
-        
-        }else if (this.mediaFinal() >= 3  < 4.9 ){
-            return "Mi";
-        
-        }else if (this.mediaFinal() >= 0.1  < 2.9 ){
-            return "II";
-        }
-        else if (this.mediaFinal() == 0){
-            return "SR";
-        }
-        
+    mediaCA(nota = this.mediaFinal()) {
+        if (nota >= 9.0 && nota <= 10) {
+            return "SS - Superior";
+            } else if (nota >= 7.0 && nota < 9.0) {
+            return "MS - Médio Superior";
+            } else if (nota >= 5.0 && nota < 7.0) {
+            return "MM - Médio";
+            } else if (nota >= 3.0 && nota < 5.0) {
+            return "MI - Médio Inferior";
+            } else if (nota >= 0.1 && nota < 3.0) {
+            return "II - Inferior";
+            } else if (nota === 0.0) {
+            return "SR - Sem rendimento";
+            } else {
+            return "Nota inválida";
+            }
     }
 }
 
