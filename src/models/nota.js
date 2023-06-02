@@ -15,7 +15,12 @@ class Nota {
     }
 
     mediaCA() {
-        return "SS";
+        if(this.mediaFinal() >= 5){
+            return "aprovado";
+        }else if (this.mediaFinal() < 5 ){
+            return "reprovado";
+        }
+        
     }
 }
 
